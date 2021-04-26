@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Chemical calculator{% endblock %}
+{% block search_bar %}{% endblock %}
+{% block content %}
+
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/static/fonts/lol.png" type="image/png">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="btn-group">
+    <form action="reaction-equation" target="_blank">
+        <button>Reaction Equation</button>
+    </form>
+  <form action="molar-mass" target="_blank">
+        <button>Molar Mass</button>
+    </form>
+  <form action="substance-mass" target="_blank">
+        <button>Mass of the Substance</button>
+    </form>
+</div>
+</body>
+</html>
+{% endblock %}

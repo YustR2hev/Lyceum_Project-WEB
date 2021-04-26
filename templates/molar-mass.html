@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Molar Mass Calculation{% endblock %}
+{% block search_bar %}{% endblock %}
+{% block content_title %}Введите любую химическую формулу, к примеру:
+<b>H2SO4</b> и нажмите Calculate, для того чтобы найти её молярную массу{% endblock %}
+
+{% block content %}
+<form action="/molar-mass" class="form-horizontal" method="post">
+    <div class="form-group">
+        <div class="col-sm-10">
+            <input class="form-control" id="formula" name="formula">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button class="btn btn-default" type="submit">Calculate</button>
+        </div>
+    </div>
+</form>
+{% if answer %}
+<div class="result">
+    <span><strong><big>{{ answer }} моль</big></strong></span>
+</div>
+{% endif %}
+{% endblock %}
